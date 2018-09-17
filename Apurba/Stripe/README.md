@@ -1,35 +1,17 @@
-magento2-Inchoo_Stripe
+magento2-Apurba_Stripe
 ======================
 
 Stripe payment gateway Magento2 extension
 
-**Module was made for educational purposes only, do not use in production! You can read the full article [here](http://inchoo.net/magento-2/implementing-payment-gateway-magento-2/)**.
+** Module is under development process. I am working on Stripe save card. Once it complete, I will upload the code.
 
-Other notes on extension: https://github.com/Inchoo/magento2-Inchoo_Stripe/wiki/Notes/
+Install process
+========================
+Download this module and place in your magento app\code\[here]
 
-Install
-=======
+1. run the command : php magento setup:upgrade
+2. php magento indexer:reindex
+3. php magento cache:flush
 
-1. Go to Magento2 root folder
-
-2. Enter following commands to install module:
-
-    ```bash
-    composer config repositories.inchoostripe git https://github.com/Inchoo/magento2-Inchoo_Stripe.git
-    composer require inchoo/stripe:dev-master
-    ```
-   Wait while dependencies are updated.
-
-3. Enter following commands to enable module:
-
-    ```bash
-    php bin/magento module:enable Inchoo_Stripe --clear-static-content
-    php bin/magento setup:upgrade
-    ```
-4. Enable and configure Stripe in Magento Admin under Stores/Configuration/Payment Methods/Stripe
-
-Other Notes
-===========
-
-**Stripe works with USD only!** If USD is not your base currency, you will not see this module on checkout pages. This copndition is [hardcoded](https://github.com/Inchoo/magento2-Inchoo_Stripe/blob/master/Model/Payment.php#L32) in payment model.
+** For any assistance please contact me at apudb009@gmail.com
 
