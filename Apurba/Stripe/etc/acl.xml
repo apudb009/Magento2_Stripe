@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Apurba_Adminhtml::admin" title="Apurba Admin">
+                <resource id="Apurba_Stripe::stripe" title="Stripe" sortOrder="40">
+                    <resource id="Apurba_Stripe::manage" title="Stripe Module" sortOrder="10">
+						<resource id="Apurba_Stripe::save" title="Save Stripe Card" sortOrder="10" />
+                        <resource id="Apurba_Stripe::news_delete" title="Delete Stripe Card" sortOrder="20" />
+					</resource>
+                </resource>
+                <resource id="Apurba_Adminhtml::stores" title="Stripe Store">
+                    <resource id="Apurba_Adminhtml::stores_settings" title="Stripe Setting">
+                        <resource id="Apurba_Adminhtml::config" title="Stripe Config">
+                            <resource id="Apurba_Stripe::config_stripe" title="Stripe Section" sortOrder="50" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

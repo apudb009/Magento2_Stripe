@@ -1,0 +1,48 @@
+<?php /* $_saveCards = $block->getCustomerSavedCards();?>
+<?php if($block->hasSavecard()): ?>
+<div class="giftcard_list_view">
+    <table class="data table table-order-items history" id="savecard-table">
+        <caption class="table-caption"><?php echo __('All Savecard') ?></caption>
+        <thead>
+            <tr>
+                <th scope="col" class="col id"><?= __('Cards') ?></th>
+                <th scope="col" class="col"></th>
+                <th scope="col" class="col"></th>
+                <th scope="col" class="col"></th>
+                <th scope="col" class="col action"><?= __('Action') ?></th>
+            </tr>
+        </thead>
+        <tbody data-bind="scope: 'del-card'">
+            <?php foreach($_saveCards as $k => $_saveCard): ?>
+                <tr>
+                    <td class="col id"><?= $_saveCard->id; ?></td>
+		    <td class="col"><?= $_saveCard->brand ?></td>
+		    <td class="col"><?= $_saveCard->last4 ?></td>
+		    <td class="col"><?php echo str_pad($_saveCard->exp_month,2,'0',STR_PAD_LEFT); ?>/<?= $_saveCard->exp_year; ?></td>
+		    <td class="col action">
+                    	<a data-card='<?= $_saveCard->id?>' data-bind="attr: {href: '#'}, click: deleteCard"><?= __('Delete')?></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php endif;?>
+<?php if( $_saveCards == null): ?>
+    <div class="message info empty"><span><?php echo __('You have no Savecard.'); ?></span></div>
+<?php endif; ?>
+<script type="text/x-magento-init">
+    {
+	"*": {
+	    "Magento_Ui/js/core/app": {
+		"components": {
+		    "del-card": {
+			"component": "Apurba_Stripe/js/deleteCard",
+			"actionUrl": "<?= $block->getDeleteUrl()?>"
+		    }
+		}
+	    }
+	}
+    }
+</script>
+<?php */?>
